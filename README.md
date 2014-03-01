@@ -36,5 +36,8 @@ RUN 2 : String - ADUMO
 
 Thus alphabets are random in same run, but not in different runs.
 
+edit1: The strings are random after a few tweaks
+	
+	The new bug is every run has A as the first letter.
 
 
