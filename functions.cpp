@@ -61,28 +61,19 @@ str str::operator+(str s1)
 }
 void str::randomizer()
 {
-        int i;
-        cout<<"Enter length"<<endl;
-        cin>>len;
-        n=new char[len+1];
-        for(i=0;i<=len;i++)
-        {
-/*              unsigned seed = chrono::system_clock::now().time_since_epoch().count();
-                default_random_engine generator(seed);
-                uniform_int_distribution<int> distribution(65,91);
-                int a  = distribution(generator);
-                n[i]=a;
-                a= distribution(generator);
-                n[i+1]=a;*/
-	//      knuth_b rand_engine;  // replace knuth_b with one of the engines listed below
-        //      uniform_int_distribution<int> distribution(65,122);
-                mt19937 mt;
-                mt.seed( time(NULL) );
-                uniform_int_distribution<int32_t> intDist(65,122);
-                int a = intDist(mt);
-                if((a<91)||(a>97))
-                {
-                         n[i]=a;
-                }
-        }
+         int i;
+         cout<<"Enter length"<<endl;
+         cin>>len;
+         n=new char[len+1];
+         unsigned seed,b;
+         b=rand()%len;
+         seed=rand()%b;
+         default_random_engine generator(seed);
+         for(i=0;i<len;i++)
+         {
+                 uniform_int_distribution<int> distribution(65,90);
+                 int a  = distribution(generator);
+                 n[i]=a;
+         }
 }
+
