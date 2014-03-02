@@ -1,6 +1,6 @@
-nclude<iostream>
+#include<iostream>
 #include<chrono>
-i#include<string.h>
+#include<string.h>
 #include"head.h"
 #include<random>
 using namespace std;
