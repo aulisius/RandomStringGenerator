@@ -50,3 +50,8 @@ edit2: The strings are same for different runs if string length is within a give
 
 Thus for (len=4 and len =10) The string is not random.
 
+Sidenote : If you are using Linux terminal, compile this using
+	  
+	  g++ -std=gnu++0x FILE_NAME (or) g++ -std=c+0x FILE_NAME
+
+Using gcc for compilation isn't working well for me.
