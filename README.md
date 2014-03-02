@@ -1,10 +1,10 @@
 This is my first project (just for fun). Documentation for the project is mentioned here.
 
-class str is defined in head.h
+	 The class str is defined in head.h
 
-methods of str are defined in functions.cpp
+	 The methods of str are defined in functions.cpp
 
-file.cpp is where function calls, instantions are called(it is the main() technically).
+	 The file.cpp is where function calls are made and objects are declared(it is the main() technically).
 
 Headers used
 	
@@ -30,13 +30,9 @@ Most of the functions used here are elementary and are just lab assignments.My p
 
 edit0: The problem right now is that strings aren't random for each run
 
-Example !
+	 RUN 1 : String - ADUMO
 
-Program compiled
-
-RUN 1 : String - ADUMO
-
-RUN 2 : String - ADUMO
+	 RUN 2 : String - ADUMO
 
 Thus alphabets are random in same run, but not in different runs.
 
@@ -44,4 +40,13 @@ edit1: The strings are random after a few tweaks
 	
 	The new bug is every run has A as the first letter.
 
+edit2: The strings are same for different runs if string length is within a given limit
+ 
+    	 RUN 1 : Length = 4 String = AHlN
+
+	 RUN 2 : Length = 10 String = AHlNqrTyPF
+
+	 RUN 3 : Length = 11 String = AApqfJRTQES
+
+Thus for (len=4 and len =10) The string is not random.
 

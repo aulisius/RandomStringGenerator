@@ -71,9 +71,18 @@ void str::randomizer()
          default_random_engine generator(seed);
          for(i=0;i<len;i++)
          {
-                 uniform_int_distribution<int> distribution(65,90);
+                 uniform_int_distribution<int> distribution(65,122);
                  int a  = distribution(generator);
-                 n[i]=a;
-         }
+                 if(a<91||a>96)
+	         {
+	                  n[i]=a;
+	         }
+	         else
+	         {
+	                  uniform_int_distribution<int> distribution(65,90);
+	                  a=distribution(generator);
+	                  n[i]=a;
+                 }
+        }
 }
 
