@@ -85,4 +85,59 @@ void str::randomizer()
                  }
         }
 }
+void str::sort()
+{
+        int i,j;
+        for(i=1;i<len;i++)
+        {
+                for(j=i+1;j<len;j++)
+                {
+                       if(n[i]>n[j])
+                       {
+                            char t;
+                            t=n[i];
+                            n[i]=n[j];
+                            n[j]=t;
+                       }
+                       else  if(n[i]<n[j])
+                       {
+                            char t;
+                            t=n[i];
+                            n[i]=n[j];
+                            n[j]=t;
+                       }
+                       cout<<n<<endl;
+                 }
+         }
+}
+void str::swap()
+{
+        char t;
+        t=n[0];
+        n[0]=n[1];
+        n[1]=t;
+}
+int str::fact(int i)
+{
+        int f=1,j;
+        for(j=1;j<=i;j++)
+        {
+              f=f*j;
+        }
+        return f;
+}
+void str::anagram()
+{
+       int a=0;
+       for(int i=0;i<(fact(len)/2);i++)
+       {
+            sort();
+            swap();
+            cout<<n<<endl;
+       }
+}
 
+	                                                                                                                                                                                  
+		                                                                                                                                                                                  
+		                                                                                                                                                                                  
+		    
