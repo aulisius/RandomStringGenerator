@@ -26,6 +26,14 @@ str has 3 data members : a char *,int and int array
 
 	 The function randomizer() - Generates a random string of given length;
 
+	 The function anagram() - Generates anagrams of a given string;
+
+	 The function swap() - Swaps the first two array elements of string;
+
+	 The function sort() - Sorts the arrayy;
+
+	 The function fact() - Calculates the factorial;
+
 Most of the functions used here are elementary and are just lab assignments.My project is to create randomized strings of given length.
 
 edit0: The problem right now is that strings aren't random for each run
@@ -55,3 +63,9 @@ Sidenote : If you are using Linux terminal, compile this using
 	  g++ -std=gnu++0x FILE_NAME (or) g++ -std=c+0x FILE_NAME
 
 Using gcc for compilation isn't working well for me.
+
+New content added : 
+
+	   anagram()  - Will create anagrams of a given string
+
+But problem is exceptions not added if letters are repeated
