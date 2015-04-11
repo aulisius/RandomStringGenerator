@@ -8,9 +8,11 @@ using namespace std;
 
 class randomstring
 {
-    int len;
+	   
+	int len;
     char *word;
     public:
+    //Constructors
     randomstring() {}
     randomstring(char *name, int l)
     {
@@ -19,7 +21,7 @@ class randomstring
         len = l;
     }
 
-    void display()
+	void display()
 	{
     	cout <<  word << endl << len << endl;
 	}
@@ -36,6 +38,7 @@ class randomstring
 
     	word = new char[len+1];
 
+		//Initializing the generator with a seed based on current time 
     	time_t now = time(0);
     	seed = now;
     	default_random_engine generator(seed);
@@ -44,9 +47,9 @@ class randomstring
     	{
 	        uniform_int_distribution<int> distribution(65,122);
     	    int current_char  = distribution(generator);
-        	if( current_char < 91 || current_char > 96)
+        	if( current_char < 91 || current_char > 96) //Check for stray ASCII values
             	word[i] = current_char;
-        	else
+        	else // Handle if stray ASCII is generated
             {
             	uniform_int_distribution<int> distribution(65,90);
             	current_char = distribution(generator);
