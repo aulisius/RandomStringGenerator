@@ -8,6 +8,7 @@ This is my first project (just for fun). Generate random strings of given length
 	 The driver.cpp is a driver file.
 
 To compile run 
-	  make Makefile
-	  ./randstr
+	  
+	  `make Makefile`
+	  `./randstr`
 
