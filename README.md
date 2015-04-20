@@ -7,6 +7,7 @@ This is my first project (just for fun). Generate random strings of given length
 
 	 The driver.cpp is a driver file.
 
-To compile, add this flag 
-	  -std=c++0x 
+To compile run 
+	  make Makefile
+	  ./randstr
 
