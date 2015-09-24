@@ -29,16 +29,14 @@ class randomstring
 			cout <<  word << endl << len << endl;
 		}
 
-		void randomizer()
+		void randomizer(int tlen)
 		{
 			int i;
 			unsigned seed;
 
-			cout << "Enter length" << endl;
-			cin >> len;
+			if(tlen <= 0) return;
 
-			if(len <= 0) return;
-
+			len = tlen;
 			word = new char[len+1];
 	
 			//Initializing the generator with a seed based on current time 
