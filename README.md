@@ -1,14 +1,11 @@
-RandomStringGenerator
-=====================
+#RandomStringGenerator
 
-This is my first project (just for fun). Generate random strings of given length. Documentation for the project is mentioned here.
+This is my first project (just for fun). Generate random strings of given length. 
 
-	 The class str is defined in randstr.h
-
-	 The driver.cpp is a driver file.
-
-To compile and run the program 
+#How to run 
 	  
-	  make Makefile
-	  ./randstr
+	  make randstr
+	  ./randstr <length>
+
+
 

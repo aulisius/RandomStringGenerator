@@ -26,7 +26,7 @@ class randomstring
 
 		void display()
 		{
-			cout <<  word << endl << len << endl;
+			cout <<  word << '\n' << len << '\n';
 		}
 
 		void randomizer(int tlen)
