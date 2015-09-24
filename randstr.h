@@ -8,54 +8,60 @@ using namespace std;
 
 class randomstring
 {
-	   
-	int len;
-    char *word;
-    public:
-    //Constructors
-    randomstring() {}
-    randomstring(char *name, int l)
-    {
-        word = new char[l+1];
-        strcpy(word,name);
-        len = l;
-    }
+	private:
+		int len;
+		char *word;
 
-	void display()
-	{
-    	cout <<  word << endl << len << endl;
-	}
+	public:
 
-	void randomizer()
-	{
-    	int i;
-    	unsigned seed;
+		//Constructors
+		randomstring() {}
+    
+		randomstring(char *name, int l)
+		{
+			word = new char[l + 1];
+			strcpy(word, name);
+			len = l;
+		}
 
-    	cout << "Enter length" << endl;
-    	cin >> len;
+		void display()
+		{
+			cout <<  word << endl << len << endl;
+		}
 
-    	if(len <= 0) return;
+		void randomizer()
+		{
+			int i;
+			unsigned seed;
 
-    	word = new char[len+1];
+			cout << "Enter length" << endl;
+			cin >> len;
 
-		//Initializing the generator with a seed based on current time 
-    	time_t now = time(0);
-    	seed = now;
-    	default_random_engine generator(seed);
+			if(len <= 0) return;
 
-    	for(i = 0; i < len ; i++)
-    	{
-	        uniform_int_distribution<int> distribution(65,122);
-    	    int current_char  = distribution(generator);
-        	if( current_char < 91 || current_char > 96) //Check for stray ASCII values
-            	word[i] = current_char;
-        	else // Handle if stray ASCII is generated
-            {
-            	uniform_int_distribution<int> distribution(65,90);
-            	current_char = distribution(generator);
-            	word[i] = current_char;
-        	}
-    	}
-	}
+			word = new char[len+1];
+	
+			//Initializing the generator with a seed based on current time 
+    	
+			time_t now = time(0);
+			seed = now;
+			default_random_engine generator(seed);
+
+			for(i = 0; i < len ; i++)
+			{
+				uniform_int_distribution<int> distribution(65,122);
+				int current_char = distribution(generator);
+        	
+				//Check for stray ASCII values
+				if( current_char < 91 || current_char > 96) word[i] = current_char;
+				else 
+				{
+					// Handle if stray ASCII is generated
+					uniform_int_distribution<int> distribution(65,90);
+					current_char = distribution(generator);
+					word[i] = current_char;
+				}
+			}
+		}
 };
-                                                                                                                                                                                     51,1          Bot
+ 
